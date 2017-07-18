@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/controller.js"></script>
+
+	<title>alura pic</title>
+
+</head>
+<body ng-controller="Controller">
+	<h5>{{welcome}}</h5>
+
+	<h6>{{image}}</h6>
+
+	<!--
+		https://www.mkyong.com/mongodb/spring-data-mongodb-save-binary-file-gridfs-example/
+		https://stackoverflow.com/questions/32008523/send-an-uploaded-image-to-the-server-and-save-it-in-the-server
+	 -->
+
+	<form>
+		<input type="file" name="foto" ng-model="image">
+		<a class="btn btn-primary" ng-click="printImage()">Save IMG</a>
+	</form>
+
+</body> 
+</html>
