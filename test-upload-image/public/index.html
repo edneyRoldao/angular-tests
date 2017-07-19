@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
+	<title> Upload file </title>
+
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
@@ -11,24 +13,30 @@
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/controllers/controller.js"></script>
+	<script type="text/javascript" src="js/directives/uploadFileDirective.js"></script>
 
-	<title>alura pic</title>
-
-</head>
-<body ng-controller="Controller">
-	<h5>{{welcome}}</h5>
-
-	<h6>{{image}}</h6>
-
-	<!--
-		https://www.mkyong.com/mongodb/spring-data-mongodb-save-binary-file-gridfs-example/
+	<!-- REFERENCES:
+		https://stackoverflow.com/questions/17063000/ng-model-for-input-type-file
 		https://stackoverflow.com/questions/32008523/send-an-uploaded-image-to-the-server-and-save-it-in-the-server
 	 -->
 
-	<form>
-		<input type="file" name="foto" ng-model="image">
-		<a class="btn btn-primary" ng-click="printImage()">Save IMG</a>
-	</form>
+</head>
+<body ng-controller="Controller">
+
+	<div class="container">
+		<h2>{{welcome}}</h2>
+		<div class="jumbotron">
+			<form>
+				<br>
+				<input type="file" name="foto" file-upload="image">
+				<br>
+				<a class="btn btn-primary" ng-click="printImage()">Save IMG</a>
+			</form>			
+		</div>
+		<div class="jumbotron">
+			<img src="{{image}}" width="150" height="150" alt="show image">
+		</div>
+	</div>
 
 </body> 
 </html>
