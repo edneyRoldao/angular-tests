@@ -4,6 +4,7 @@ angular.module('app').controller('Controller', function($scope, StoreImageServic
 	$scope.images = [];	
 
 	$scope.save = function() {
+		console.log($scope.image.length);
 		StoreImageService.saveImage($scope.image);
 		$scope.images = StoreImageService.getImages(); 		
 	};

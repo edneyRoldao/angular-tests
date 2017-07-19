@@ -5,7 +5,9 @@ function fileUpload() {
 		fileUpload: "="
 	};
 
-	directiveObj.link = function(scope, element, attributes) {
+	directiveObj.restrict = "A";
+
+	directiveObj.link = function(scope, element) {
 		element.bind("change", function(changeEvent) {
 			var reader = new FileReader();
 			reader.onload = function(LoadEvent) {
