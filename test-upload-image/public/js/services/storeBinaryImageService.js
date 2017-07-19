@@ -3,14 +3,12 @@ var images = [];
 function storeImageAsBinarySource() {
 	var service = {};
 
-	service.saveImage = function(binaryImage) {
-		images.push(binaryImage);
+	service.saveImage = function(image) {
+		images.push(image);
 	};
 
-	service.readImage = function(id) {
-		return images.filter(function(image) {
-			return image.id === id;
-		})[0];
+	service.getImages = function() {
+		return images;
 	};
 
 	return service;

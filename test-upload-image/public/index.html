@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/controllers/controller.js"></script>
+	<script type="text/javascript" src="js/services/storeBinaryImageService.js"></script>	
 	<script type="text/javascript" src="js/directives/uploadFileDirective.js"></script>
 
 	<!-- REFERENCES:
@@ -30,11 +31,13 @@
 				<br>
 				<input type="file" name="foto" file-upload="image">
 				<br>
-				<a class="btn btn-primary" ng-click="printImage()">Save IMG</a>
+				<a class="btn btn-primary" ng-click="save()">Save IMG</a>
 			</form>			
 		</div>
 		<div class="jumbotron">
-			<img src="{{image}}" width="150" height="150" alt="show image">
+			<ul ng-repeat="img in images">
+				<li> <img src="{{img}}" width="50" height="50" alt="show image"> </li>
+			</ul>
 		</div>
 	</div>
 

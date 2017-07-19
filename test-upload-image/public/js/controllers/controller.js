@@ -1,9 +1,11 @@
-angular.module('app').controller('Controller', function($scope) {
+angular.module('app').controller('Controller', function($scope, StoreImageService) {
 	$scope.welcome = "FILE UPLOAD TEST";
-	$scope.uploadImg = "";
-	$scope.showImg = "";
 
-	$scope.printImage = function() {
-		console.log($scope.uploadImg);
-	}
+	$scope.images = [];	
+
+	$scope.save = function() {
+		StoreImageService.saveImage($scope.image);
+		$scope.images = StoreImageService.getImages(); 		
+	};
+
 });
