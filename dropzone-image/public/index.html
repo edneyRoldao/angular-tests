@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/controller.js"></script>
+	<script type="text/javascript" src="js/directives/dropzoneFileDirective.js"></script>
+	<script type="text/javascript" src="js/directives/uploadFileDirective.js"></script>
+
+	<title>drag and drop file dictive</title>
+</head>
+<body ng-controller="Controller">
+	<div class="container">
+		<h2> {{ welcome }} </h2>
+		<div class="jumbotron">
+			<div class="dropzone" 
+				 file-dropzone="[image/png, image/jpeg, image/gif]"
+				 file="image" 
+				 file-name="imageFileName" 
+				 data-max-file-size="3">
+				 <span>Drop Image Here</span>
+			</div>
+			<div class="image-container">
+				<img ng-src={{image}} />
+				<span class="file-name">{{imageFileName}}</span>
+			</div>
+			<form action>
+				<input type="file" file-upload="uploadme.src">
+				<img ng-src="{{ uploadme.src }}">
+			</form>
+		</div>		
+	</div>
+</body>
+</html>
