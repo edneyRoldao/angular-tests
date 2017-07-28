@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/controller.js"></script>
+	<script type="text/javascript" src="js/services/questionsSelectorService.js"></script>
+
+	<title>English Questions Selector</title>
+
+	<style type="text/css">
+		.question {
+			color: blue;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body ng-controller="Controller">
+	<div class="container">
+		<div class="jumbotron">
+			<strong>
+				<h2>{{ welcome }}</h2>				
+			</strong>
+			<div class="btn btn-success btn-block" ng-click="selectQuestion()">
+				pick out a new question
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h3>
+				<span class="question">{{ question }}</span>
+			</h3>				
+		</div>
+	</div>
+</body>
+</html>
