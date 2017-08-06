@@ -2,44 +2,31 @@
 <html ng-app="app">
 <head>
 	<meta charset="utf-8">
+
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="lib/ui-cropper/ng-img-crop.css">	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
-	<script type="text/javascript" src="lib/ui-cropper/ng-img-crop.js"></script>	
+	<script type="text/javascript" src="lib/moment/moment.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/controllers/controller.js"></script>
 
-	<title>Quick start angular</title>
+	<title> MomentJS samples </title>
+
 </head>
 <body ng-controller="Controller">
-	<h1> {{ welcome }} </h1>
+
+
 	<div class="container">
+		<h1> {{ welcome }} </h1>
 		<div class="jumbotron">
-			<div>
-				Select image:
-				<input type="file" id="fileInput">
-			</div>
-
-			<div>
-				<img-crop image="myImage" result-image="myCroppedImage"></img-crop>
-			</div>
+			<h3>Years samples</h3>
+			<h5> {{ test }} </h5>
 		</div>
-
-		<div class="jumbotron">
-			<img ng-src="{{myCroppedImage}}"/>
-		</div>
-
-		<div class="jumbotron">
-			{{myCroppedImage}}
-			<br><br><br><br><br><br><br>
-			{{myImage}}
-		</div>
-
 	</div>
+
 </body>
 </html>
