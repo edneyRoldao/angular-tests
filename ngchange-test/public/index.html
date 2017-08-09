@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/controller.js"></script>
+
+	<title>Test ng change</title>
+
+</head>
+<body ng-controller="Controller">
+
+	<div class="container">
+		<div class="jumbotron">
+			<h3> {{ welcome }} </h3>
+			<input type="text" ng-change="testChanging()" ng-model="myValue" />
+			<p>The input field has changed {{count}} times.</p>
+		</div>
+	</div>
+
+</body>
+</html>
