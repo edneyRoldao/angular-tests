@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/controllers/controller.js"></script>
+	<script type="text/javascript" src="js/directives/cepMaskDirective.js"></script>
 
 	<title>Test ng change</title>
 
@@ -25,6 +26,20 @@
 			<p>The input field has changed {{count}} times.</p>
 		</div>
 	</div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h3> {{ welcomeMask }} </h3>
+			<input 
+				type="text"
+				cep-mask 
+				ng-change="testChanging2()" 
+				ng-model="cep" />
+			<p>The input field has changed {{count2}} times.</p>
+			<p>{{cep}}</p>
+		</div>
+	</div>
+
 
 </body>
 </html>
